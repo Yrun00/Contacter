@@ -61,7 +61,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun requestPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
             if (ContextCompat.checkSelfPermission(
                     this,
                     Manifest.permission.READ_CONTACTS
@@ -72,10 +72,7 @@ class MainActivity : ComponentActivity() {
 
                 requestPermissionLauncher.launch(Manifest.permission.READ_CONTACTS)
             }
-        } else {
 
-            viewModel.loadContacts()
-        }
     }
 
     @Composable
