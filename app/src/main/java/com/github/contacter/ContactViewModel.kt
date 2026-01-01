@@ -11,9 +11,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ContactViewModel(contentResolver: ContentResolver) : ViewModel() {
-    init {
 
-    }
     private val dataSource = ContactDataSource(contentResolver)
 
     private val _contacts = MutableStateFlow<List<Contact>>(emptyList())
